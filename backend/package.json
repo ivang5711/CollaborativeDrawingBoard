@@ -1,0 +1,15 @@
+{
+  "name": "collaborative-drawing-board-backend",
+  "version": "1.0.0",
+  "description": "collaborative drawing board app backend",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "author": "Ivan Girsov",
+  "dependencies": {
+    "express": "^4.18.2",
+    "socket.io": "^4.7.2"
+  }
+}
