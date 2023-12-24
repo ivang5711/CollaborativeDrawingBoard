@@ -43,7 +43,7 @@ const RoomPage = () => {
                         <button className="btn btn-outline-primary mt-1">Redo</button>
                     </div>
                     <div className="col-md-7 d-flex align-items-center justify-content-center">
-                        <button className="btn btn-danger">Clear canvas</button>
+                        <button className="btn btn-danger" onClick={ jandleClearCanvas }>Clear canvas</button>
                     </div>
                 </div>
             </div>
@@ -53,6 +53,7 @@ const RoomPage = () => {
                     ctxRef={ctxRef}
                     elements={elements}
                     setElements={setElements}
+                    color={ color }
                     tool={ tool }
                 />
             </div>
