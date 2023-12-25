@@ -9,7 +9,7 @@ const WhiteBoard = ({ canvasRef, ctxRef, elements, setElements, tool, color, use
 
     useEffect(() => {
         socket.on("whiteBoardDataResponse", (data) => {
-            setImg(data);
+            setImg(data.imgURL);
         });
     }, []);
     
