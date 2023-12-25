@@ -4,7 +4,7 @@ import "./index.css";
 
 import WhiteBoard from "../../components/Whiteboard";
 
-const RoomPage = ({ user }) => {
+const RoomPage = ({ user, socket }) => {
 
   const canvasRef = useRef(null);
   const ctxRef = useRef(null)
@@ -102,6 +102,7 @@ const RoomPage = ({ user }) => {
           color={color}
           tool={tool}
           user={user}
+          socket={socket}
         />
       </div>
     </div>
