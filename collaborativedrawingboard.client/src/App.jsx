@@ -7,7 +7,7 @@ import Forms from "./components/Forms";
 import RoomPage from "./pages/RoomPage";
 import { useEffect, useState } from "react";
 
-const server = "http://localhost:5000";
+const server = "http://localhost:5000/";
 const connectionOptions = {
     "force new connection": true,
     reconnectionAttempts: "Infinity",
