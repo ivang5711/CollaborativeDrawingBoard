@@ -3,7 +3,7 @@
 <img src="https://shields.io/badge/Typescript-white?logo=typescript&style=for-the-badge"><img src="https://shields.io/badge/next.js-black?logo=next.js&style=for-the-badge"> <img src="https://shields.io/badge/JavaScript-yellow?style=for-the-badge"> 
 
 Frontend for the Collaborative Drawing Board app.\
-THe app allows users to create drawing boards and draw on them in\
+The app allows users to create drawing boards and draw on them in\
 collaborative manner. Users can work on the same board simultaniously.
 
 >Check out the <a href=""><i>Demo Video</a>!</i>
