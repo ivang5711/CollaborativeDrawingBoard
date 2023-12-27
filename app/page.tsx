@@ -6,63 +6,17 @@ import { useDraw } from '../hooks/useDraw'
 import { CirclePicker } from 'react-color'
 import { io } from 'socket.io-client'
 import { drawLine } from '../utils/drawLine'
-import App from 'next/app';
-
-
-// import React from 'react'
-// import ReactDOM from 'react-dom/client'
-// import { BrowserRouter as Router } from "react-router-dom";
-
-// ReactDOM.createRoot(document.getElementById('root')!).render(
-//   <Router>
-//     <App />
-//   </Router>,
-// )
-
-
-
-
-
-
-
-
-
 const socket = io('http://localhost:3001')
-
-// let roomsQ = 1;
-
-// // recieve a message from the server
-// socket.on("hello", (arg) => {
-//   console.log(arg);
-//   roomsQ = arg;
-// });
-
-// // send a message to the server
-// socket.emit("howdy", roomsQ);
-
-
-
-// interface pageProps { }
-
-// type DrawLineProps = {
-//   prevPoint: Point | null
-//   currentPoint: Point
-//   color: string
-// }
-
 const page: FC<{}> = ({ }) => {
   const [color, setColor] = useState<string>('#000')
   const { canvasRef, onMouseDown, clear } = useDraw(createLine)
-
   useEffect(() => {
     const ctx = canvasRef.current?.getContext('2d')
     var canvas = document.querySelector('canvas');
     console.log(canvas);
     canvas!.width = window.innerWidth;
     canvas!.height = window.innerHeight;
-
     socket.emit('client-ready')
-
     socket.on('get-canvas-state', () => {
       if (!canvasRef.current?.toDataURL()) return
       console.log('sending canvas state')
@@ -84,7 +38,6 @@ const page: FC<{}> = ({ }) => {
     })
 
     socket.on('clear', clear)
-
     return () => {
       socket.off('draw-line')
       socket.off('get-canvas-state')
